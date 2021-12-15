@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/insert.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <title>Pokedex-Ev's</title>
+</head>
+<body>
+  <header>
+    <img src="./assets/Logo.png"/>
+    <div id="clock"></div>
+    <h3>Filtrado de Ev's:</h3>
+    <script src="./js/clock.js"></script>
+    <form onsubmit="InputForm();return false" id="MiForm">
+      <input type="text" id="HP" placeholder="HP">
+      <input type="text" id="Atk" placeholder="Atk">
+      <input type="text" id="Def" placeholder="Def">
+      <input type="text" id="Spa" placeholder="Spa">
+      <input type="text" id="Spd" placeholder="Spd">
+      <input type="text" id="Spe" placeholder="Spe">
+      <input type="submit" style="width: 60px;">
+    </form>
+  </header>
+
+  <div class="insert" id="insert"></div>
+  <script src="./js/insert.js"></script>
+
+  <footer>
+    <div>
+      <div>
+        Pokedex-Ev's
+      </div>
+      <div>
+        <a class="fooLink" href="https://github.com/TecnoRed20"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

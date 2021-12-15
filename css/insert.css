@@ -1,0 +1,36 @@
+.insert {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+
+  border: solid 2px #ff4500;
+  border-radius: 5px;
+}
+
+.name {
+  text-align: center;
+  width: 150px;
+  margin-bottom: 5px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.evs {
+  display: flex;
+  flex-direction: column;
+}
+.evs spam {
+  display: flex;
+  justify-content: flex-end;
+}
