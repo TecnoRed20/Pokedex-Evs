@@ -2,13 +2,12 @@
 const getPokeData = []
 
 // Hacemos la peticion a la API
-for (i = 1; i <= 898; i++){    
-  getPokeData.push(new Promise ((datos) => {
-    datos(fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`)
-      .then(response => response.json())
-      .then(data => data)
-    )
-  }))
+async function getData() {
+  for (i = 1; i <= 898; i++) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}/`) 
+    const data = response.json()
+    getPokeData.push(data)
+  }
 }
 
 // Injectamos el pokemon pasado por parametro
@@ -59,6 +58,7 @@ function InsertPokemon(pokemon){
 
 // Injectamos todos los pokemons
 function InsertAllPokemons(){
+  document.getElementById('insert').innerHTML = "";
   Promise.all(getPokeData).then((pokemon) => {
     for (var i=0;i<pokemon.length;i++) {
       InsertPokemon(pokemon[i])
@@ -108,4 +108,6 @@ function Filter(Ps, Atk, Def, Spa, Spd, Spe) {
   })
 }
 
-InsertAllPokemons()
+getData().then(() => {
+  InsertAllPokemons()
+})
